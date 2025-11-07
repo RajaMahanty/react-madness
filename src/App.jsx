@@ -1,12 +1,14 @@
-import Add from "./components/Add.jsx";
-import Greet from "./components/Greet.jsx";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import MainContent from "./components/MainContent";
 
 const App = () => {
 	return (
-		<>
-			<Greet name="Raja" />
-			<Add />
-		</>
+		<div>
+			<Header />
+			<MainContent />
+			<Footer />
+		</div>
 	);
 };
 
