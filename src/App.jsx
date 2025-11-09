@@ -1,12 +1,16 @@
-import Greeting from "./components/Greeting";
-import ProductInfo from "./components/ProductInfo";
+import ProductList from "./components/ProductList";
+import UserListV2 from "./components/UserListV2";
 
 const App = () => {
 	return (
-		<div>
-			<Greeting />
-			<ProductInfo />
-		</div>
+		<main>
+			<h2>User List</h2>
+			<UserListV2 />
+			<br />
+			<br />
+			<h2>Product List</h2>
+			<ProductList />
+		</main>
 	);
 };
 
