@@ -2,8 +2,10 @@ import { FaBeer } from "react-icons/fa";
 
 const IconComponent = () => {
 	return (
-		<div style={{ fontSize: 30, color: "gold" }}>
+		<div>
 			<FaBeer />
+			<FaBeer size={32} />
+			<FaBeer size={32} color="gold" />
 		</div>
 	);
 };
