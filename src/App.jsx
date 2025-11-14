@@ -1,13 +1,16 @@
-import FocusInput from "./components/FocusInput";
-import InputTracker from "./components/InputTracker";
-import Timer from "./components/Timer";
+import useFetch from "./hooks/useFetch";
 
 const App = () => {
+	const [data] = useFetch("https://jsonplaceholder.typicode.com/todos");
+
 	return (
 		<main>
-			<FocusInput />
-			<InputTracker />
-			<Timer />
+			{data &&
+				data.map((item) => (
+					<p key={item.id}>
+						{"=>  "} {item.title}
+					</p>
+				))}
 		</main>
 	);
 };
