@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Sixtyfour&display=swap');
+
+
+div {
+  min-height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow: auto;
+}
+
+button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Sixtyfour', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: 'Bungee Outline', cursive;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  button {
+    top: 15px;
+    right: 15px;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

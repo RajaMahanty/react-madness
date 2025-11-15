@@ -1,5 +1,6 @@
 import Calculator from "./components/calculator/Calculator";
 import Counter from "./components/counter/Counter";
+import Dynamic from "./components/dynamic/Dynamic";
 import Meals from "./components/meals/Meals";
 import Todo from "./components/todo/Todo";
 
@@ -9,7 +10,9 @@ const App = () => {
 			{/* <Counter /> */}
 			{/* <Todo /> */}
 			{/* <Meals /> */}
-			<Calculator />
+			{/* <Calculator /> */}
+			{/* <Dynamic /> */}
+			
 		</main>
 	);
 };
