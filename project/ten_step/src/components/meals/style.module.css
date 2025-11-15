@@ -1,0 +1,136 @@
+/* Container holding all meal cards */
+.itemsContainer {
+  --gap: 1.25rem;
+  --columns: repeat(auto-fill, minmax(180px, 1fr));
+  display: grid;
+  grid-template-columns: var(--columns);
+  gap: var(--gap);
+  padding: 1.5rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+/* Individual card */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e4e6ea;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(30, 40, 55, 0.08);
+  transition: box-shadow .25s, transform .25s;
+  isolation: isolate;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, rgba(0, 122, 255, 0.08), transparent 60%);
+  opacity: 0;
+  transition: opacity .3s;
+  pointer-events: none;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px -4px rgba(30, 40, 55, 0.25);
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+/* Image */
+.image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  background: #f5f7fa;
+  transition: filter .3s;
+}
+
+.card:hover .image {
+  filter: brightness(0.9) saturate(1.1);
+}
+
+/* Text content */
+.content {
+  padding: .75rem .9rem .9rem;
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
+  font-size: .85rem;
+  line-height: 1.25;
+  color: #253858;
+}
+
+.content p {
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.content p:first-child {
+  font-weight: 600;
+  font-size: .9rem;
+}
+
+.content p:last-child {
+  font-size: .7rem;
+  letter-spacing: .5px;
+  opacity: .65;
+}
+
+/* Focus accessibility */
+.card:focus-within,
+.card:focus {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+/* Responsive tweaks */
+@media (min-width: 700px) {
+  .itemsContainer {
+    --gap: 1.5rem;
+  }
+
+  .card {
+    border-radius: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .card,
+  .image {
+    transition: none;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  .itemsContainer {
+    background: #0f1115;
+  }
+
+  .card {
+    background: #1c2127;
+    border-color: #2c333b;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .6);
+  }
+
+  .content {
+    color: #e5e9ef;
+  }
+
+  .content p:last-child {
+    opacity: .55;
+  }
+}

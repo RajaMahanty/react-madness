@@ -1,9 +1,13 @@
-import Counter from "./components/Counter";
+import Counter from "./components/counter/Counter";
+import Meals from "./components/meals/Meals";
+import Todo from "./components/todo/Todo";
 
 const App = () => {
 	return (
 		<main>
-			<Counter />
+			{/* <Counter /> */}
+			{/* <Todo /> */}
+			<Meals />
 		</main>
 	);
 };

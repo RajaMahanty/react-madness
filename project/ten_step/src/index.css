@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  /* avoid vertical centering that hides top rows */
+  align-items: flex-start;
+  /* top-align content so first row is visible */
+  gap: 2rem;
+  padding: 2rem;
+  overflow-y: auto;
+  /* enable scrolling when content exceeds viewport */
+}
