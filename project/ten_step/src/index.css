@@ -12,12 +12,8 @@ body {
 #root {
   height: 100%;
   display: flex;
-  justify-content: flex-start;
-  /* avoid vertical centering that hides top rows */
-  align-items: flex-start;
-  /* top-align content so first row is visible */
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
   padding: 2rem;
-  overflow-y: auto;
-  /* enable scrolling when content exceeds viewport */
 }

@@ -11,8 +11,9 @@ const Dynamic = () => {
 	};
 
 	return (
-		<div style={{ backgroundColor, color: textColor }}>
+		<div className={styles.root} style={{ backgroundColor, color: textColor }}>
 			<button
+				className={styles.toggleButton}
 				onClick={handleClick}
 				style={{
 					color: textColor,
