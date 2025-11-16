@@ -1,3 +1,4 @@
+import Accordians from "./components/accordian/Accordians";
 import Calculator from "./components/calculator/Calculator";
 import Counter from "./components/counter/Counter";
 import Dynamic from "./components/dynamic/Dynamic";
@@ -15,7 +16,8 @@ const App = () => {
 			{/* <Calculator /> */}
 			{/* <Dynamic /> */}
 			{/* <HiddenSearchBar /> */}
-			<Testimonial />
+			{/* <Testimonial /> */}
+			<Accordians />
 		</main>
 	);
 };
